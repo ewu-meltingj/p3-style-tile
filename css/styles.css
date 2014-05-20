@@ -4,6 +4,9 @@ html {
 body {
   -webkit-font-smoothing: subpixel-antialiased;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display SC', serif;
+}
 h1 {font-size: 2em;}
 h2 {font-size: 1.5em;}
 h3 {font-size: 1.17em;}
@@ -40,6 +43,15 @@ blockquote:before {
 blockquote p { 
   display: inline;
 }
+strong {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+em {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-weight: 400;
+}
 
 
 /* Set Your Own Margin & Padding */
@@ -61,28 +73,49 @@ section {
   border: 1px solid #000;
   float: left;
   margin: 0 10px;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
+  outline: none;
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display SC', serif;
+.color-1 {
+  background: #000;
+}
+.color-2 {
+  background: cornflowerblue;
+}
+.color-3 {
+  background: magenta;
+}
+
+div[class*="color-"]:after {
+  position: fixed;
+  background: inherit;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  content: attr(data);
+  height: 50%;
+  width: 50%;
+  padding: 1em;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease-out;
+  -moz-transition: opacity .25s ease-out;
+  -o-transition: opacity .25s ease-out;
+  transition: opacity .25s ease-out;
+  box-shadow: 0px 0px 0px 9000px rgba(0,0,0,0.75);
+}
+div:focus:after {
+  opacity: 1;
 }
 
 /* Show Grid */
 .showgrid {
   background: url("../img/grid-bg.png") repeat-y;
-}
-
-p.legibility {
-  text-rendering: geometricPrecision;
-}
-strong {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-}
-em {
-  font-family: 'Merriweather', serif;
-  font-style: italic;
-  font-weight: 400;
 }
