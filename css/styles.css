@@ -28,7 +28,7 @@ p {
   background: url('../img/textures/witewall_3.png');
   margin: 0;
 }
-section:nth-of-type(2) p:first-of-type::before {
+section p:first-of-type:before {
   content: "\00b6";
   font-size: 3em;
   line-height: 1.2em;
@@ -47,22 +47,8 @@ p~p {
 p:last-of-type {
   padding-bottom: 20px;
 }
-blockquote {
-  font-style: italic;
-  font-weight: 400;
-  margin: 0;
-  padding: 0.5em 10px;
-  font-family: 'Averia Serif Libre', cursive;
-  text-transform: uppercase;
-  font-style: normal;
-  background: rgba(255,255,255,0.75);
-  border-top: .25em solid rgba(55,55,55,0.5);
-}
-blockquote:before {
-  color: rgba(55,55,55,0.5);
-}
-blockquote p { 
-  display: inline;
+p+em {
+  padding-bottom: 20px;
 }
 strong {
   font-weight: 700;
@@ -74,6 +60,8 @@ em {
   padding: 0px 20px 12px 20px;
   background: url('../img/textures/witewall_3.png');
   display: block;
+  color: #555;
+  font-size: 0.83em;
 }
 br {
   display: none;
@@ -106,14 +94,9 @@ div:focus:after {
   visibility: visible;
   opacity: 1;
 }
-
-/* Layout for Style Tile*/
 section {
   margin: 0;
   border-bottom: 1px solid #aaa;
-}
-section:nth-of-type(even) {
-    background: url('../img/textures/stardust.png'); 
 }
 section:nth-last-of-type(1), section:nth-last-of-type(2) {
   width: 50%;
@@ -127,8 +110,8 @@ section:nth-last-of-type(1) em, section:nth-last-of-type(2) em{
   text-align: center;
   padding: 25px 0 25px 0;
   font-size: 1.17em;
+  color: #222;
 }
-
 .color-1,
 .color-2,
 .color-3,
@@ -147,14 +130,14 @@ section:nth-last-of-type(1) em, section:nth-last-of-type(2) em{
   0 0 0 10px rgba(255,255,255,0.75);
 }
 .color-1 {
-  background: #000;
+  background: cornflowerblue;
   margin-right: 30px;
 }
 .color-2 {
-  background: cornflowerblue;
+  background: #444;
 }
 .color-3 {
-  background: magenta;
+  background: #111;
 }
 .pattern-1 {
   background: url('../img/textures/stardust.png');
@@ -165,4 +148,13 @@ section:nth-last-of-type(1) em, section:nth-last-of-type(2) em{
 }
 .pattern-3 {
   background: url('../img/textures/stardust.png');
+}
+.container:after {
+  content: "Jeremy Meltingtallow 2014";
+  background: url('../img/textures/witewall_3.png');
+  width: calc(100% - 30px);
+  display: block;
+  text-align: right;
+  padding: 10px 30px 10px 0;
+  font-size: .75em;
 }
