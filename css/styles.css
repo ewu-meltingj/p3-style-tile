@@ -1,11 +1,55 @@
+html {
+  font: 100%/1.5 'Merriweather', serif;
+}
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.17em;}
+h4 {font-size: 1em;}
+h5 {font-size: 0.83em;}
+h6 {font-size: 0.75em;}
+p {
+  line-height: 1.5;
+  margin: 0 0 1em;
+  font-weight: 400;
+}
+p~p {
+  text-indent: 2em;
+  margin-top: .5em;
+}
+blockquote {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-weight: 400;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before { 
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p { 
+  display: inline;
+}
+
+
 /* Set Your Own Margin & Padding */
 h2, h3, p {
-	margin: 0;
+  margin: 0;
 }
 
 /* Layout for Style Tile*/
 section {
-	margin: 20px 0;
+    margin: 20px 0;
 }
 
 .color-1,
@@ -14,15 +58,31 @@ section {
 .pattern-1,
 .pattern-2,
 .pattern-3 {
-	border: 1px solid #000;
-	float: left;
-	margin: 0 10px;
-	height: 50px;
-	width: 50px;
+  border: 1px solid #000;
+  float: left;
+  margin: 0 10px;
+  height: 50px;
+  width: 50px;
 }
 
+h1, h2, h3 {
+  font-family: 'Playfair Display SC', serif;
+}
 
 /* Show Grid */
 .showgrid {
-	background: url("../img/grid-bg.png") repeat-y;
+  background: url("../img/grid-bg.png") repeat-y;
+}
+
+p.legibility {
+  text-rendering: geometricPrecision;
+}
+strong {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+em {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-weight: 400;
 }
