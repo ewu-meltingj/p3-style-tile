@@ -2,8 +2,12 @@ html {
   font: 120%/1.5 'Merriweather', serif;
   background: url('../img/textures/stardust.png'); 
 }
+svg {
+  width: 100%;
+}
 body {
   -webkit-font-smoothing: subpixel-antialiased;
+  margin-top: 20px;
 }
 h1 {font-size: 2em;}
 h2 {font-size: 1.5em;}
@@ -148,6 +152,21 @@ section:nth-last-of-type(1) em, section:nth-last-of-type(2) em{
 }
 .pattern-3 {
   background: url('../img/textures/stardust.png');
+}
+.container section:nth-of-type(2) {
+  position: relative;
+  z-index: -2;
+}
+.container section:nth-of-type(2):after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  border-bottom: 20px solid #aaa;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: calc(100% - 20px);
 }
 .container:after {
   content: "Jeremy Meltingtallow 2014";
