@@ -71,12 +71,13 @@ em {
   font-style: italic;
   font-weight: 400;
   margin: 0px;
-  padding: 0px 20px 10px 20px;
+  padding: 0px 20px 12px 20px;
   background: url('../img/textures/witewall_3.png');
   display: block;
 }
-
-
+br {
+  display: none;
+}
 div[class*="color-"], div[class*="pattern-"] {
   cursor: pointer;
 }
@@ -108,10 +109,24 @@ div:focus:after {
 
 /* Layout for Style Tile*/
 section {
-  margin: 20px 0;
+  margin: 0;
+  border-bottom: 1px solid #aaa;
 }
 section:nth-of-type(even) {
     background: url('../img/textures/stardust.png'); 
+}
+section:nth-last-of-type(1), section:nth-last-of-type(2) {
+  width: 50%;
+  float: left;
+}
+section:nth-last-of-type(1) div, section:nth-last-of-type(2) div{
+  float: right;
+}
+section:nth-last-of-type(1) em, section:nth-last-of-type(2) em{
+  display: block;
+  text-align: center;
+  padding: 25px 0 25px 0;
+  font-size: 1.17em;
 }
 
 .color-1,
@@ -122,14 +137,18 @@ section:nth-of-type(even) {
 .pattern-3 {
   border: 1px solid #000;
   float: left;
-  margin: 0 10px;
+  margin: 15px 15px 0 15px;
   height: 50px;
   width: 50px;
   outline: none;
+  border-radius: 100px;
+  box-shadow:
+  0 0 0 5px rgba(0,0,0,0.75),
+  0 0 0 10px rgba(255,255,255,0.75);
 }
-
 .color-1 {
   background: #000;
+  margin-right: 30px;
 }
 .color-2 {
   background: cornflowerblue;
@@ -138,11 +157,12 @@ section:nth-of-type(even) {
   background: magenta;
 }
 .pattern-1 {
-  background: url('../img/textures/stardust.png'); 
+  background: url('../img/textures/stardust.png');
+  margin-right: 30px;
 }
 .pattern-2 {
-  background: url('../img/textures/tweed.png'); 
+  background: url('../img/textures/witewall_3.png');
 }
 .pattern-3 {
-  background: url('../img/textures/witewall_3.png'); 
+  background: url('../img/textures/stardust.png');
 }
