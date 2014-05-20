@@ -206,5 +206,16 @@ div.container {
   animation:         space 360s infinite normal both linear;
 }
 @-webkit-keyframes space { 
-from { -webkit-transform:rotate(0deg) } 
-to { -webkit-transform:rotate(360deg) } }
+  from { 
+    -webkit-transform:rotate(0deg)
+    -moz-transform:rotate(0deg)
+    -o-transform:rotate(0deg)
+    transform:rotate(0deg)
+  } 
+  to {
+    -webkit-transform:rotate(360deg)
+    -moz-transform:rotate(0deg)
+    -o-transform:rotate(0deg)
+    transform:rotate(0deg)
+  }
+}
