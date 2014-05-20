@@ -1,11 +1,9 @@
 html {
-  font: 100%/1.5 'Merriweather', serif;
+  font: 120%/1.5 'Merriweather', serif;
+  background: url('../img/textures/stardust.png'); 
 }
 body {
   -webkit-font-smoothing: subpixel-antialiased;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display SC', serif;
 }
 h1 {font-size: 2em;}
 h2 {font-size: 1.5em;}
@@ -13,46 +11,75 @@ h3 {font-size: 1.17em;}
 h4 {font-size: 1em;}
 h5 {font-size: 0.83em;}
 h6 {font-size: 0.75em;}
+h1, h2, h3, h3, h4, h5, h6 {
+  color: #222;
+  font-family: 'Averia Serif Libre', cursive;
+  background: url('../img/textures/witewall_3.png');
+  padding: 10px 20px 0px 20px;
+  margin: 0px 0 0 0;
+}
 p {
   line-height: 1.5;
   margin: 0 0 1em;
   font-weight: 400;
+  padding: 20px 20px 0 20px;
+  color: #111;
+  text-align: justify;
+  background: url('../img/textures/witewall_3.png');
+  margin: 0;
+}
+section:nth-of-type(2) p:first-of-type::before {
+  content: "\00b6";
+  font-size: 3em;
+  line-height: 1.2em;
+  float: left;
+  padding: 0 .125em 0 .125em;
+  height: 50px;
+  display: inline-block;
+  margin-right: 5px;
+  color: #333;
 }
 p~p {
   text-indent: 2em;
-  margin-top: .5em;
+  margin-top: 0;
+  padding-top: 0;
+}
+p:last-of-type {
+  padding-bottom: 20px;
 }
 blockquote {
-  font-family: 'Merriweather', serif;
   font-style: italic;
   font-weight: 400;
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
+  margin: 0;
   padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+  font-family: 'Averia Serif Libre', cursive;
+  text-transform: uppercase;
+  font-style: normal;
+  background: rgba(255,255,255,0.75);
+  border-top: .25em solid rgba(55,55,55,0.5);
 }
-blockquote:before { 
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+blockquote:before {
+  color: rgba(55,55,55,0.5);
 }
 blockquote p { 
   display: inline;
 }
 strong {
-  font-family: 'Merriweather', serif;
   font-weight: 700;
 }
 em {
-  font-family: 'Merriweather', serif;
   font-style: italic;
   font-weight: 400;
+  margin: 0px;
+  padding: 0px 20px 10px 20px;
+  background: url('../img/textures/witewall_3.png');
+  display: block;
 }
 
+
+div[class*="color-"], div[class*="pattern-"] {
+  cursor: pointer;
+}
 div[class*="color-"]:after, div[class*="pattern-"]:after {
   position: fixed;
   background: inherit;
@@ -65,10 +92,6 @@ div[class*="color-"]:after, div[class*="pattern-"]:after {
   height: 50%;
   width: 50%;
   padding: 1em;
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  font-size: 1.5em;
-  color: #fff;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .25s ease-out;
@@ -76,20 +99,19 @@ div[class*="color-"]:after, div[class*="pattern-"]:after {
   -o-transition: opacity .25s ease-out;
   transition: opacity .25s ease-out;
   box-shadow: 0px 0px 0px 9000px rgba(0,0,0,0.75);
+  border: 5px solid rgba(255,255,255,0.5);
 }
 div:focus:after {
   visibility: visible;
   opacity: 1;
 }
 
-/* Set Your Own Margin & Padding */
-h2, h3, p {
-  margin: 0;
-}
-
 /* Layout for Style Tile*/
 section {
-    margin: 20px 0;
+  margin: 20px 0;
+}
+section:nth-of-type(even) {
+    background: url('../img/textures/stardust.png'); 
 }
 
 .color-1,
@@ -101,8 +123,8 @@ section {
   border: 1px solid #000;
   float: left;
   margin: 0 10px;
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   outline: none;
 }
 
@@ -123,9 +145,4 @@ section {
 }
 .pattern-3 {
   background: url('../img/textures/witewall_3.png'); 
-}
-
-/* Show Grid */
-.showgrid {
-  background: url("../img/grid-bg.png") repeat-y;
 }
