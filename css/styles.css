@@ -166,7 +166,7 @@ div.container {
   padding-top: 20px;
   position: relative;
 }
-/* This is the container with the most content */
+/* This is the container with the most content The after psuedo element creates the 3demensional effect shocased. I used the css shape from csstricks and styled according to my needs */
 .container section:nth-of-type(2) {
   position: relative;
 }
