@@ -131,6 +131,10 @@ section:nth-last-of-type(1) em, section:nth-last-of-type(2) em{
   0 0 0 5px rgba(0,0,0,0.75),
   0 0 0 10px rgba(255,255,255,0.75);
 }
+a:link, a:active, a:hover, a:visited {
+  color: cornflowerblue;
+  text-decoration: none;
+}
 .color-1 {
   background: cornflowerblue;
   margin-right: 30px;
